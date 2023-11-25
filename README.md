@@ -22,7 +22,7 @@ CodeCraft caters to a wide spectrum of industries and applications. Whether you'
 
 ## How to Use
 
-1. **Clone the Repository**: `git clone https://github.com/yourusername/CodeCraft.git`
+1. **Clone the Repository**: `git clone https://github.com/tanvir-abid/CodeCraft-Code-Generator.git`
 2. **Run the Tool**: Execute the tool using Python or launch the standalone executable file.
 3. **Select Code Generation Type**: Choose the code generation type and parameters as per your requirements.
 4. **Access Generated Codes**: Access the generated codes in your preferred format or integrate them seamlessly into your project.
