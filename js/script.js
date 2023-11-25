@@ -1,3 +1,96 @@
+function createInputElements() {
+  const inputContainer = document.querySelector('.input-container');
+  inputContainer.innerHTML = "";
+  // Create div for 'How many digits do you want?' input
+  const digitsInputGroup = document.createElement('div');
+  digitsInputGroup.classList.add('input-group');
+
+  const digitsLabel = document.createElement('label');
+  digitsLabel.setAttribute('for', 'length');
+  digitsLabel.textContent = 'How many digits do you want?';
+
+  const digitsInput = document.createElement('input');
+  digitsInput.setAttribute('type', 'number');
+  digitsInput.setAttribute('id', 'length');
+  digitsInput.setAttribute('min', '8');
+  digitsInput.setAttribute('value', '8');
+
+  digitsInputGroup.appendChild(digitsLabel);
+  digitsInputGroup.appendChild(digitsInput);
+
+  // Create div for 'Choose a combination' select input
+  const combinationInputGroup = document.createElement('div');
+  combinationInputGroup.classList.add('input-group');
+
+  const combinationLabel = document.createElement('label');
+  combinationLabel.setAttribute('for', 'combination');
+  combinationLabel.textContent = 'Choose a combination:';
+
+  const combinationSelect = document.createElement('select');
+  combinationSelect.setAttribute('id', 'combination');
+
+  const combinations = [
+      'Capital Alphabets', 'Small Alphabets', 'Numbers', 'Special Characters',
+      'Alphabets (Capital + Small)', 'Alphabets + Numbers (Capital + Small)',
+      'Alphabets + Special Characters (Capital + Small)', 'Numbers + Special Characters',
+      'Alphabets (Capital) + Numbers + Special Characters', 'Alphabets (Small) + Numbers + Special Characters',
+      'Alphabets (Capital + Small) + Numbers', 'Alphabets (Capital + Small) + Special Characters',
+      'Alphabets (Capital + Small) + Numbers + Special Characters'
+  ];
+
+  combinations.forEach((option, index) => {
+      const optionElement = document.createElement('option');
+      optionElement.setAttribute('value', index + 1);
+      optionElement.textContent = option;
+      combinationSelect.appendChild(optionElement);
+  });
+
+  combinationInputGroup.appendChild(combinationLabel);
+  combinationInputGroup.appendChild(combinationSelect);
+
+  // Create div for 'How many suggestions do you want?' input
+  const suggestionsInputGroup = document.createElement('div');
+  suggestionsInputGroup.classList.add('input-group');
+
+  const suggestionsLabel = document.createElement('label');
+  suggestionsLabel.setAttribute('for', 'suggestions');
+  suggestionsLabel.textContent = 'How many suggestions do you want?';
+
+  const suggestionsInput = document.createElement('input');
+  suggestionsInput.setAttribute('type', 'number');
+  suggestionsInput.setAttribute('id', 'suggestions');
+  suggestionsInput.setAttribute('min', '1');
+  suggestionsInput.setAttribute('value', '1');
+
+  suggestionsInputGroup.appendChild(suggestionsLabel);
+  suggestionsInputGroup.appendChild(suggestionsInput);
+
+  // Create div for buttons
+  const buttonsContainer = document.createElement('div');
+  buttonsContainer.classList.add('btn-container');
+
+  const generateButton = document.createElement('button');
+  generateButton.textContent = 'Generate Code';
+  generateButton.addEventListener('click', generateCode);
+
+  const downloadButton = document.createElement('button');
+  downloadButton.textContent = 'Download Code';
+  downloadButton.addEventListener('click', downloadAsExcel);
+
+  buttonsContainer.appendChild(generateButton);
+  buttonsContainer.appendChild(downloadButton);
+
+  // Append all created elements to the input container
+  inputContainer.appendChild(digitsInputGroup);
+  inputContainer.appendChild(combinationInputGroup);
+  inputContainer.appendChild(suggestionsInputGroup);
+  inputContainer.appendChild(buttonsContainer);
+}
+
+// Call the function to generate and append the HTML elements
+createInputElements();
+
+//----------------------------------------------------------------------//
 function generateCode() {
   const length = parseInt(document.getElementById('length').value);
   const combination = document.getElementById('combination').value;
