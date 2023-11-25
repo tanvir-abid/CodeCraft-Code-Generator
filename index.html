@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+
+    <title>CodeCraft : Code Generator</title>
+
+    <meta name="title" content="CodeCraft: Generate Unique Codes on the Fly! | Tanvir Abid" />
+    <meta name="description" content="Explore an innovative online tool for generating unique codes and passwords! Our platform offers a custom alphanumeric code generator, secure serial keys for software, and random code generation with symbols and numbers. Create voucher codes for e-commerce, game activation tools, and strong passwords effortlessly. Access our API for JavaScript-based batch code generation, a cryptographically secure code maker, and pattern-based code creation. Generate QR codes, customizable discount codes, and unique identifiers for databases. Discover our code snippet generator for developers and a JavaScript library empowering random code creation tasks!">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/tanvir-abid">
+    <meta property="og:title" content="Play, Solve, and Enjoy! | Tanvir Abid's Sudoku puzzle game">
+    <meta property="og:description" content="Explore an innovative online tool for generating unique codes and passwords! Our platform offers a custom alphanumeric code generator, secure serial keys for software, and random code generation with symbols and numbers. Create voucher codes for e-commerce, game activation tools, and strong passwords effortlessly. Access our API for JavaScript-based batch code generation, a cryptographically secure code maker, and pattern-based code creation. Generate QR codes, customizable discount codes, and unique identifiers for databases. Discover our code snippet generator for developers and a JavaScript library empowering random code creation tasks!">
+    <meta property="og:image" content="https://i.postimg.cc/rw4z6nx2/Code-Craft-Code-Generator-by-tanvir-abid.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://github.com/tanvir-abid">
+    <meta property="twitter:title" content="Play, Solve, and Enjoy! | Tanvir Abid's Sudoku puzzle game">
+    <meta property="twitter:description" content="Explore an innovative online tool for generating unique codes and passwords! Our platform offers a custom alphanumeric code generator, secure serial keys for software, and random code generation with symbols and numbers. Create voucher codes for e-commerce, game activation tools, and strong passwords effortlessly. Access our API for JavaScript-based batch code generation, a cryptographically secure code maker, and pattern-based code creation. Generate QR codes, customizable discount codes, and unique identifiers for databases. Discover our code snippet generator for developers and a JavaScript library empowering random code creation tasks!">
+    <meta property="twitter:image" content="https://i.postimg.cc/rw4z6nx2/Code-Craft-Code-Generator-by-tanvir-abid.png">
+    
+    <!-- Search Engine -->
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Custom alphanumeric code generator online, Generate secure serial keys for software, Random code generator with symbols and numbers, Create unique voucher codes for e-commerce, Code creation tool for game activation, Random password generator for strong passwords, API for generating batch codes in JavaScript, Cryptographically secure code maker, Algorithmic pattern for code generation, Online utility for generating access tokens, Pattern-based code generator for projects, Code generator for two-factor authentication, QR code generator for event tickets, Customizable discount code creator for marketing, Unique identifier generator for databases, Code snippet generator for developers, Secure license key generator for apps, Keygen software for product activation, JavaScript library for random code creation, Pattern-based coupon code generator">
+    <meta name="author" content="Tanvir Abid, a versatile tech enthusiast skilled in HTML, CSS, vanilla JavaScript, and Python. With a passion for crafting captivating web experiences, I specialize in creating dynamic and user-friendly interfaces. As an adept problem solver, I thrive on developing innovative solutions and love sharing knowledge about programming and web development through engaging content.">
+  
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="main-container">
+
+<section class="intro-container">
+    <div class="app-title">
+        <img src="img/secure-password.png" alt="" srcset="">
+        <div class="titleAndSlogan">
+            <h1>CodeCraft : Code Generator</h1>
+            <p>By Tanvir Abid</p>
+        </div>
+    </div>
+</section>
+
+<section class="inpuAndOutput-container">
+    <div class="inputAndInstruction">
+        <div class="instructions" id="usageLocations">
+            <h2>Where This Code Generator Can Be Used</h2>
+            <ol>
+                <li>Secure Software Activation & Licensing</li>
+                <li>E-commerce Voucher & Discount Codes</li>
+                <li>Game Activation & Key Generation</li>
+                <li>Strong & Random Password Creation</li>
+                <li>JavaScript API Integration</li>
+                <li>Pattern-Based & Algorithmic Code Generation</li>
+                <li>Two-Factor Authentication Implementation</li>
+                <li>QR Code Generation for Tickets & Products</li>
+                <li>Database Identifier & Access Token Generation</li>
+                <li>Developers' Code Snippet & Library Generation</li>
+            </ol>
+        </div>
+        <div class="input-container">
+            <div class="input-group">
+                <label for="length">How many digits do you want?</label>
+            <input type="number" id="length" min="8" value="8">
+            </div>
+            
+            <div class="input-group">
+                <label for="combination">Choose a combination:</label>
+                <select id="combination">
+                    <option value="1">Capital Alphabets</option>
+                    <option value="2">Small Alphabets</option>
+                    <option value="3">Numbers</option>
+                    <option value="4">Special Characters</option>
+                    <option value="5">Alphabets (Capital + Small)</option>
+                    <option value="6">Alphabets + Numbers (Capital + Small)</option>
+                    <option value="7">Alphabets + Special Characters (Capital + Small)</option>
+                    <option value="8">Numbers + Special Characters</option>
+                    <option value="9">Alphabets (Capital) + Numbers + Special Characters</option>
+                    <option value="10">Alphabets (Small) + Numbers + Special Characters</option>
+                    <option value="11">Alphabets (Capital + Small) + Numbers</option>
+                    <option value="12">Alphabets (Capital + Small) + Special Characters</option>
+                    <option value="13">Alphabets (Capital + Small) + Numbers + Special Characters</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="suggestions">How many suggestions do you want?</label>
+                <input type="number" id="suggestions" min="1" value="1">
+            </div>
+            
+            <div class="btn-container">
+                <button onclick="generateCode()">Generate Code</button>
+                <button onclick="downloadAsExcel()">Download Code</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="output-container">
+        <div id="generatedCode"></div>
+    </div>
+</section>
+
+</div>
+  
+<footer class="site-footer">
+    <p><a href="">Tanvir Abid</a> &copy;<span id="currentYear"></span>. All Rights Reserved.</p>
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+<script src="js/script.js"></script> 
+</body>
+</html>

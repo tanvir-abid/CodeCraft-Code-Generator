@@ -1,0 +1,326 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #072240;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.main-container {
+  width: 100%;
+  min-height: 650px;
+  margin-bottom: 10px;
+}
+
+.intro-container{
+    margin-bottom: 30px;
+}
+
+.app-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.app-title img {
+  width: 70px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.titleAndSlogan h1 {
+  font-size: 2.5em;
+  margin: 0;
+  color: #9BBEC8;
+}
+
+.titleAndSlogan p {
+  font-size: 0.8em;
+  color: #777;
+  margin: 0;
+}
+
+.inputAndInstruction{
+    display: flex;
+    padding: 30px;
+    gap: 20px;
+}
+
+.instructions{
+    width: 50%;
+}
+
+/* CSS for Code Generator Usage */
+#usageLocations {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 10px 0;
+  border-radius: 8px;
+  color: #fff;
+}
+
+#usageLocations h2 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+#usageLocations ol {
+  list-style-type: decimal;
+  padding-left: 40px;
+}
+
+#usageLocations li {
+  font-size: 15px;
+  padding: 2px;
+}
+
+/* Optional: Hover effect */
+#usageLocations li:hover {
+  color: #ff6600; /* Change the text color on hover */
+  cursor: pointer;
+}
+
+
+.input-container {
+  margin-bottom: 20px;
+  width: 50%;
+  margin: 0 auto;
+  box-shadow: 0px 4px 10px rgba(255,255,255,0.5);
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.input-group{
+    margin-bottom: 10px;
+}
+
+.input-container label {
+  display: block;
+  font-weight: bold;
+  color: #fff;
+}
+
+.btn-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-container select,
+.input-container input[type="number"],
+.btn-container button {
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.btn-container button {
+  margin-top: 10px;
+  background-color: #3498db;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-container button:hover{
+    background-color: #035891;
+}
+
+.btn-container button:last-child{
+    background-color: #504099;
+}
+.input-container select{
+    width: 100%;
+}
+.input-container input[type="number"],
+.input-container button {
+    width: 97%;
+}
+
+.input-container select:hover,
+.input-container input[type="number"]:hover {
+  border-color: #3498db;
+}
+
+/* Generated Code Display */
+.output-container {
+  text-align: left;
+  margin-top: 30px;
+}
+
+#generatedCode {
+  border-radius: 8px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#generatedCode table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+#generatedCode th,
+#generatedCode td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+#generatedCode th:nth-child(1),
+#generatedCode td:nth-child(1),
+#generatedCode th:nth-child(3),
+#generatedCode td:nth-child(3) {
+  width: 10%;
+}
+
+#generatedCode th:nth-child(2),
+#generatedCode td:nth-child(2) {
+  width: 80%;
+  text-align: left;
+}
+
+#generatedCode td:nth-child(2) {
+    overflow: auto;
+    word-wrap: break-word;
+  }
+
+#generatedCode th {
+  font-weight: bold;
+}
+
+#generatedCode thead {
+    background-color: #504099;
+}
+
+#generatedCode tbody tr{
+    transition: all 0.3s ease;
+}
+#generatedCode tbody tr:hover{
+    background-color: #2980b9;
+    color: #fff;
+}
+
+#generatedCode button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #BB2525;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto; /* Center the button */
+}
+
+#generatedCode button:hover {
+  background-color: #800202;
+}
+
+
+/*  CSS styles for the footer */
+.site-footer {
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  bottom: 0;
+  width: 99.8%;
+  border: 1px solid #333;
+  margin: 0 auto;
+}
+.site-footer p {
+  margin: 0;
+  font-size: 14px;
+}
+.site-footer a{
+    color: #BB2525;
+    text-decoration: none;
+}
+.site-footer a:hover{
+    color: #64CCC5;
+    text-decoration: underline;
+}
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+
+  .main-container {
+    padding: 5px;
+    width: auto; /* Adjust width to fit content */
+  }
+  .app-title{
+    padding: 10px;
+    margin: 10px 0;
+  }
+  .titleAndSlogan h1 {
+    font-size: 1.8em; /* Decrease font size for smaller screens */
+  }
+  .inputAndInstruction{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .instructions{
+    width: 100%;
+  }
+  .input-container {
+    width: 90%; /* Adjust width to fit content */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .input-container select{
+    width: 100%;
+  }
+  .input-container input[type="number"] {
+    width: 94%; /* Make inputs and button full-width */
+  }
+
+  .output-container {
+    margin-top: 20px; /* Adjust margin top */
+  }
+
+  #generatedCode {
+    width: 100%; /* Adjust width to fit smaller screens */
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+
+  #generatedCode td {
+    word-break: break-all; /* Break long words in table cells */
+    padding: 8px; /* Adjust padding */
+    font-size: 0.8em; /* Decrease font size */
+  }
+
+  #generatedCode th,
+  #generatedCode td {
+    border: 1px solid #fff;
+  }
+
+  #generatedCode button {
+    margin: 5px auto; /* Center the button */
+    width: 100%; 
+    font-size: 10px;
+  }
+    #generatedCode th:nth-child(1),
+    #generatedCode td:nth-child(1){
+        width: 5%;
+    }
+    #generatedCode th:nth-child(3),
+    #generatedCode td:nth-child(3) {
+    width: 15%;
+    }
+
+    #generatedCode th:nth-child(2),
+    #generatedCode td:nth-child(2) {
+    width: 80%;
+    text-align: left;
+    }
+  /* Adjustments for footer in mobile view */
+  .site-footer {
+    padding: 15px 0;
+    font-size: 12px; /* Smaller font size */
+  }
+}
